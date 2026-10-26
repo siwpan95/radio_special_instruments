@@ -1,0 +1,97 @@
+# 🎵 特殊乐器池演示专辑 —— 管弦 x 电子混合
+album:
+  title: 管弦电子混合 Demo
+  artist: BloodMusic Engine
+  genre: orchestral-electronic
+  year: 2026
+
+instrument_pool:
+  name: Special + Synth Hybrid Pool
+  bpm: 100
+  key: Am
+  scale: minor
+  global_volume: 0.85
+  generation:
+    diversity: 0.5
+    humanize: true
+    seed: 42
+    chord_progression: cinematic
+  instruments:
+  # ── 特殊采样乐器（VSCO-2 CE CC0管弦 + FreePats 世界打击乐）──
+  - name: 小提琴独奏
+    role: melody
+    engine: sampler
+    sample_path: G:/music/radio_special_instruments/VSCO-2-CE-master/VSCO-2-CE-master/Strings/Solo Violin/Arco Vib/LLVln_ArcoVib_A3_f.wav
+    volume: 0.8
+  - name: 大提琴组
+    role: bass
+    engine: sampler
+    sample_path: G:/music/radio_special_instruments/VSCO-2-CE-master/VSCO-2-CE-master/Strings/Cello Section/pizzT/pizzT_A2_v1_RR1.wav
+    volume: 0.75
+  - name: 小号
+    role: melody
+    engine: sampler
+    sample_path: G:/music/radio_special_instruments/VSCO-2-CE-master/VSCO-2-CE-master/Brass/Trumpet/harmonM-sus/Sum_SHTrumpet_harmonM-sus_C3_v1_rr1.wav
+    volume: 0.7
+  - name: 竖琴
+    role: chord
+    engine: sampler
+    sample_path: G:/music/radio_special_instruments/VSCO-2-CE-master/VSCO-2-CE-master/Strings/Harp/KSHarp_A2_mf.wav
+    volume: 0.65
+  - name: 沙锤
+    role: drum
+    engine: sampler
+    sample_path: G:/music/radio_special_instruments/world_percussion/world-percussion-main/samples/EggShaker/slow_01.wav
+    volume: 0.6
+  # ── 合成器补充（节奏 + 铺底）──
+  - name: 合成鼓组
+    role: drum
+    engine: noise
+    volume: 0.7
+  - name: 合成铺底
+    role: pad
+    engine: granular
+    preset: bright_pad
+    volume: 0.4
+  - name: 合成贝斯
+    role: bass
+    engine: subtractive
+    preset: deep_bass
+    volume: 0.8
+
+mix_config:
+  clip_mode: soft
+  normalize_mode: rms
+  rms_target_db: -2.0
+  fade_in_ms: 80
+  fade_out_ms: 300
+  compress: true
+  compress_threshold: -18.0
+  compress_ratio: 3.0
+
+separate_mode: manifest
+
+tracks:
+# 1 — 电影史诗（采样管弦 + 大鼓）
+- title: 序幕 · 崛起
+  bpm: 80
+  bars: 20
+  key: Dm
+  style: cinematic
+  seed: 42
+
+# 2 — 世界音乐（采样打击乐 + 竖琴）
+- title: 旅途 · 异域
+  bpm: 100
+  bars: 16
+  key: Am
+  style: folk
+  seed: 777
+
+# 3 — 古典室内乐（采样小提琴独奏）
+- title: 独奏 · 回忆
+  bpm: 72
+  bars: 16
+  key: C
+  style: classical
+  seed: 1234
