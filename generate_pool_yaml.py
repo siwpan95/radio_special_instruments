@@ -58,7 +58,10 @@ def collect_wavs(root: Path):
 def generate_yaml(instruments: dict, pool_name: str) -> str:
     lines = [
         f"# 自动生成: {datetime.now().isoformat()}",
-        f"# 来源: G:\music\radio_special_instruments",
+        # 2026-10-26 订正：原写 f"# 来源: G:\music\radio_special_instruments"，
+        # 其中 \r 被当作回车转义（SyntaxWarning，且注释里混进了 CR），
+        # 且旧址 G:\music\ 已不存在 ⇒ 改为脚本自身所在目录
+        f"# 来源: {ROOT}",
         f"name: {pool_name}",
         f"bpm: 120",
         f"key: C",
