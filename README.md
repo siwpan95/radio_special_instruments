@@ -1,3 +1,8 @@
+> ⚠️ **已不再维护 / Archived — No longer maintained**
+>
+> 本仓库已停止开发投入，仅作归档保留，不再接收功能更新或 issue。代码保持原样，仅供历史参考。
+> _This repository is no longer maintained. It is archived as-is for historical reference only._
+
 # radio_special_instruments
 
 特殊乐器采样包库（CC0 等），含下载与乐器池生成脚本。
@@ -25,7 +30,7 @@
   （合并同类项：G:\assets 整体是资源池，其中带脚本的项按 fonts / csmusic 的路子建仓归位）。
   同期修掉脚本里写死的旧址：
   - `download_all.py` 的 `ROOT`：`G:\music\radio_special_instruments` → **脚本自身所在目录**
-  - `sfx_to_pool.py` 的 `POOL_DIR` / `POOL_YAML`：同上；`F:/Python314` 解释器路径 → `sys.executable`
+  - `sfx_to_pool.py` 的 `POOL_DIR` / `POOL_YAML`：同上；`/Python314` 解释器路径 → `sys.executable`
   - `sfx_to_pool.py` 的外部输入 `SFX_OUTPUT`（原 `G:/tools/sfx/sounds/output`，该路径本机已不存在）
     → 改为**可用环境变量 `SFX_OUTPUT` 覆盖**
 
