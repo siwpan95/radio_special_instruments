@@ -36,3 +36,11 @@
 
 ## 测试状态
 3 个脚本通过 py_compile 语法检查（syntax_ok，含转义序列 SyntaxWarning，不影响运行）。
+
+
+## 许可
+
+- MIT-0，见 [LICENSE](LICENSE)。
+- MIT No Attribution —— 无署名义务。
+
+<!-- 补写记账：radio_special_instruments · 本段由 allin 仓 tools/publish_area_readme_sections.py 依据本仓自身事实补写 -->
